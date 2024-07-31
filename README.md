@@ -38,11 +38,12 @@
     ```
     rails server
     ```
+
 > - To stop the server, use `Ctrl` + `C` in the open terminal
 <!-- * How to run the test suite -->
 
 ## Schema
-<img width="738" alt="database schema graph and table relationships" src="">
+<img width="738" alt="database schema graph and table relationships" src="https://github.com/user-attachments/assets/ca4f9c09-9c10-47d5-9de5-851548ea7d4e">
 
 
 ## Endpoints
