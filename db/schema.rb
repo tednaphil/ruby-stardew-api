@@ -10,13 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_07_31_164513) do
+ActiveRecord::Schema[7.1].define(version: 2024_07_31_171525) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "character_gifts", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "gift_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_character_gifts_on_character_id"
+    t.index ["gift_id"], name: "index_character_gifts_on_gift_id"
+  end
+
+  create_table "character_hobbies", force: :cascade do |t|
+    t.bigint "character_id", null: false
+    t.bigint "hobby_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["character_id"], name: "index_character_hobbies_on_character_id"
+    t.index ["hobby_id"], name: "index_character_hobbies_on_hobby_id"
+  end
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
     t.string "birthday"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "gifts", force: :cascade do |t|
+    t.string "slug"
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "hobbies", force: :cascade do |t|
+    t.string "slug"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -37,6 +69,10 @@ ActiveRecord::Schema[7.1].define(version: 2024_07_31_164513) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "character_gifts", "characters"
+  add_foreign_key "character_gifts", "gifts"
+  add_foreign_key "character_hobbies", "characters"
+  add_foreign_key "character_hobbies", "hobbies"
   add_foreign_key "user_friends", "characters"
   add_foreign_key "user_friends", "users"
 end
