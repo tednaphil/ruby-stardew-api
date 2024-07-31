@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_friends
   get 'characters/index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
@@ -10,7 +11,7 @@ Rails.application.routes.draw do
 
   resources :users
 
-  resources  :user_friends
+  resources :user_friends
 
 
   # Defines the root path route ("/")
