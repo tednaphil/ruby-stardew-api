@@ -15,8 +15,13 @@ class CharactersController < ApplicationController
 
   def index
     # render json: CharactersPresenter.new(Character.all)
-    @characters = Character.all
-    render json: @characters
+    # @characters = Character.all
+    # @characters.each do |c|
+    #   puts c
+    #   puts "Hi There"
+    # end
+
+    render json: Character.all
 
   end
 end
