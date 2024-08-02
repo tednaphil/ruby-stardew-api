@@ -14,19 +14,6 @@ class Character < ApplicationRecord
             #select name from the hobbies
         @char_hobbies = Character.find(char_id).character_hobbies
         @char_hobbies.map{ |h| Hobby.find([h.id]) }.flatten
-        # @names = @char_hobbies.each do |h| 
-        #     text = h :name
-        #     puts "Hi Tayla"
-        #     puts text
-        # end
-
-        # @names
-        # sql = "SELECT name FROM hobbies
-        # WHERE character_id = char_id"
-
-        # records_array = ActiveRecord::Base.connection.execute(sql)
-        
-        # put @names
     end
 
     def self.fav_gift_names(char_id)
@@ -37,7 +24,4 @@ class Character < ApplicationRecord
     def self.data(char_id)
         Character.find(char_id)
     end
-    
-
-
 end
