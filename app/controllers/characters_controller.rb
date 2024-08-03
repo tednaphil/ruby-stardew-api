@@ -14,12 +14,11 @@ class CharactersController < ApplicationController
 
   def index
     # @characters = Character.all
-    # @characters.each do |c|
-    #   puts c
-    #   puts "Hi There"
+    # @characters.each do |character|
+    #   render only id, name, avatar, and birthday
+    #   render array of strings instead of objects for character gifts and hobbies
     # end
-
     render json: Character.all
-
   end
+
 end

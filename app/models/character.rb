@@ -9,9 +9,6 @@ class Character < ApplicationRecord
     has_many :hobbies, through: :character_hobbies
 
     def self.hobby_names(char_id)
-        #write Active Record query
-            #find the character hobbies
-            #select name from the hobbies
         @char_hobbies = Character.find(char_id).character_hobbies
         @char_hobbies.map{ |h| Hobby.find([h.id]) }.flatten
     end
