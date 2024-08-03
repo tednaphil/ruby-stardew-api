@@ -296,7 +296,6 @@ gifts = [
   { slug: 'prismatic-shard', name: 'Prismatic Shard' },
   { slug: 'rabbit\'s-foot', name: 'Rabbit\'s Foot' },
   { slug: 'void-salmon', name: 'Void Salmon' },
-  { slug: 'amethyst', name: 'Amethyst' },
   { slug: 'apple', name: 'Apple' },
   { slug: 'apricot', name: 'Apricot' },
   { slug: 'beer', name: 'Beer' },
@@ -322,12 +321,338 @@ gifts = [
   { slug: 'sweet-pea', name: 'Sweet Pea' },
   { slug: 'truffle', name: 'Truffle' },
   { slug: 'truffle-oil', name: 'Truffle Oil' },
-  { slug: 'wine', name: 'Wine' }
+  { slug: 'wine', name: 'Wine' },
+  { slug: 'catfish', name: 'Catfish' },
+  { slug: 'peach', name: 'Peach' },
+  { slug: 'daffodil', name: 'Daffodil' },
+  { slug: 'mango-sticky-rice', name: 'Mango Sticky Rice' },
+  { slug: 'cranberry-candy', name: 'Cranberry Candy' },
+  { slug: 'ginger-ale', name: 'Ginger Ale' },
+  { slug: 'grape', name: 'Grape' },
+  { slug: 'snail', name: 'Snail' },
+  { slug: 'jewels-of-the-sea', name: 'Jewels of The Sea' },
+  { slug: 'octopus', name: 'Octopus' },
+  { slug: 'sea-cucumber', name: 'Sea Cucumber' },
+  { slug: 'sturgeon', name: 'Sturgeon' },
+  { slug: 'the-art-o-crabbing', name: 'The Art O\' Crabbing' },
+  { slug: 'book-of-mysteries', name: 'Book of Mysteries' },
+  { slug: 'solar-essence', name: 'Solar Essence' },
+  { slug: 'super-cucumber', name: 'Super Cucumber' },
+  { slug: 'void-essence', name: 'Void Essence' },
 ]
 
 gifts.each do |gift|
     Gift.find_or_create_by(gift)
 end
+
+character_hobbies = [
+  { character_id: 1, hobby_id: 1 },  # Abigail - Playing flute
+  { character_id: 1, hobby_id: 16 }, # Abigail - Mining
+  { character_id: 1, hobby_id: 29 }, # Abigail - Playing video games
+  { character_id: 2, hobby_id: 17 }, # Alex - Playing football
+  { character_id: 2, hobby_id: 18 }, # Alex - Working out
+  { character_id: 2, hobby_id: 22 }, # Alex - Cooking
+  { character_id: 3, hobby_id: 3 },  # Elliott - Writing
+  { character_id: 3, hobby_id: 4 },  # Elliott - Reading
+  { character_id: 3, hobby_id: 25 }, # Elliott - Fishing
+  { character_id: 4, hobby_id: 11 }, # Emily - Sewing
+  { character_id: 4, hobby_id: 12 }, # Emily - Making clothes
+  { character_id: 4, hobby_id: 22 }, # Emily - Baking
+  { character_id: 5, hobby_id: 13 }, # Haley - Photography
+  { character_id: 5, hobby_id: 14 }, # Haley - Shopping
+  { character_id: 5, hobby_id: 15 }, # Haley - Sunbathing
+  { character_id: 6, hobby_id: 19 }, # Harvey - Medicine
+  { character_id: 6, hobby_id: 20 }, # Harvey - Flying drones
+  { character_id: 6, hobby_id: 22 }, # Harvey - Cooking
+  { character_id: 7, hobby_id: 5 },  # Leah - Painting
+  { character_id: 7, hobby_id: 6 },  # Leah - Sculpting
+  { character_id: 7, hobby_id: 23 }, # Leah - Foraging
+  { character_id: 8, hobby_id: 7 },  # Maru - Inventing
+  { character_id: 8, hobby_id: 8 },  # Maru - Building robots
+  { character_id: 8, hobby_id: 29 }, # Maru - Playing video games
+  { character_id: 9, hobby_id: 4 },  # Penny - Reading
+  { character_id: 9, hobby_id: 24 }, # Penny - Helping others
+  { character_id: 9, hobby_id: 27 }, # Penny - Farming
+  { character_id: 10, hobby_id: 9 }, # Sam - Playing guitar
+  { character_id: 10, hobby_id: 10 }, # Sam - Skateboarding
+  { character_id: 10, hobby_id: 22 }, # Sam - Cooking
+  { character_id: 11, hobby_id: 28 }, # Sebastian - Programming
+  { character_id: 11, hobby_id: 29 }, # Sebastian - Playing video games
+  { character_id: 11, hobby_id: 9 },  # Sebastian - Playing guitar
+  { character_id: 12, hobby_id: 30 }, # Shane - Raising chickens
+  { character_id: 12, hobby_id: 31 }, # Shane - Drinking
+  { character_id: 12, hobby_id: 29 }, # Shane - Playing video games
+  { character_id: 13, hobby_id: 19 }, # Caroline - Gardening
+  { character_id: 13, hobby_id: 22 }, # Caroline - Cooking
+  { character_id: 13, hobby_id: 3 },  # Caroline - Writing
+  { character_id: 14, hobby_id: 16 }, # Clint - Mining
+  { character_id: 14, hobby_id: 32 }, # Clint - Blacksmithing
+  { character_id: 14, hobby_id: 4 },  # Clint - Reading
+  { character_id: 15, hobby_id: 2 },  # Demetrius - Science
+  { character_id: 15, hobby_id: 19 }, # Demetrius - Gardening
+  { character_id: 15, hobby_id: 22 }, # Demetrius - Cooking
+  { character_id: 16, hobby_id: 26 }, # Dwarf - Gemology
+  { character_id: 16, hobby_id: 16 }, # Dwarf - Mining
+  { character_id: 16, hobby_id: 23 }, # Dwarf - Foraging
+  { character_id: 17, hobby_id: 33 }, # Evelyn - Knitting
+  { character_id: 17, hobby_id: 22 }, # Evelyn - Baking
+  { character_id: 17, hobby_id: 19 }, # Evelyn - Gardening
+  { character_id: 18, hobby_id: 34 }, # George - Watching TV
+  { character_id: 18, hobby_id: 35 }, # George - Complaining
+  { character_id: 18, hobby_id: 4 },  # George - Reading
+  { character_id: 19, hobby_id: 22 }, # Gus - Cooking
+  { character_id: 19, hobby_id: 25 }, # Gus - Fishing
+  { character_id: 19, hobby_id: 36 }, # Gus - Playing darts
+  { character_id: 20, hobby_id: 37 }, # Jas - Playing with animals
+  { character_id: 20, hobby_id: 4 },  # Jas - Reading
+  { character_id: 20, hobby_id: 38 }, # Jas - Drawing
+  { character_id: 21, hobby_id: 22 }, # Jodi - Cooking
+  { character_id: 21, hobby_id: 19 }, # Jodi - Gardening
+  { character_id: 21, hobby_id: 39 }, # Jodi - Exercising
+  { character_id: 22, hobby_id: 29 }, # Kent - Playing video games
+  { character_id: 22, hobby_id: 40 }, # Kent - Hunting
+  { character_id: 22, hobby_id: 39 }, # Kent - Exercising
+  { character_id: 23, hobby_id: 41 }, # Krobus - Collecting artifacts
+  { character_id: 23, hobby_id: 42 }, # Krobus - Playing chess
+  { character_id: 23, hobby_id: 4 },  # Krobus - Reading
+  { character_id: 24, hobby_id: 43 }, # Leo - Stargazing
+  { character_id: 24, hobby_id: 44 }, # Leo - Camping
+  { character_id: 24, hobby_id: 38 }, # Leo - Drawing
+  { character_id: 25, hobby_id: 45 }, # Lewis - Governing
+  { character_id: 25, hobby_id: 46 }, # Lewis - History
+  { character_id: 25, hobby_id: 47 }, # Lewis - Geography
+  { character_id: 26, hobby_id: 23 }, # Linus - Foraging
+  { character_id: 26, hobby_id: 44 }, # Linus - Camping
+  { character_id: 26, hobby_id: 4 },  # Linus - Reading
+  { character_id: 27, hobby_id: 27 }, # Marnie - Farming
+  { character_id: 27, hobby_id: 48 }, # Marnie - Taking care of animals
+  { character_id: 27, hobby_id: 22 }, # Marnie - Cooking
+  { character_id: 28, hobby_id: 31 }, # Pam - Drinking
+  { character_id: 28, hobby_id: 34 }, # Pam - Watching TV
+  { character_id: 28, hobby_id: 35 }, # Pam - Complaining
+  { character_id: 29, hobby_id: 49 }, # Pierre - Business
+  { character_id: 29, hobby_id: 22 }, # Pierre - Cooking
+  { character_id: 29, hobby_id: 19 }, # Pierre - Gardening
+  { character_id: 30, hobby_id: 50 }, # Robin - Carpentry
+  { character_id: 30, hobby_id: 19 }, # Robin - Gardening
+  { character_id: 30, hobby_id: 22 }, # Robin - Cooking
+  { character_id: 31, hobby_id: 51 }, # Sandy - Exploring
+  { character_id: 31, hobby_id: 52 }, # Sandy - Collecting rare items
+  { character_id: 31, hobby_id: 19 }, # Sandy - Gardening
+  { character_id: 32, hobby_id: 53 }, # Vincent - Playing with friends
+  { character_id: 32, hobby_id: 38 }, # Vincent - Drawing
+  { character_id: 32, hobby_id: 51 }, # Vincent - Exploring
+  { character_id: 33, hobby_id: 25 }, # Willy - Fishing
+  { character_id: 33, hobby_id: 51 }, # Willy - Exploring
+  { character_id: 33, hobby_id: 22 }, # Willy - Cooking
+  { character_id: 34, hobby_id: 54 }, # Wizard - Alchemy
+  { character_id: 34, hobby_id: 55}, # Wizard - Magic
+  { character_id: 34, hobby_id: 22 }, # Wizard - Cooking
+]
+
+character_hobbies.each do |hobby|
+    CharacterHobby.find_or_create_by(hobby)
+end
+
+character_gifts = [
+  { character_id: 1, gift_id: 1 },
+  { character_id: 1, gift_id: 2 },
+  { character_id: 1, gift_id: 3 },
+  { character_id: 1, gift_id: 4 },
+  { character_id: 1, gift_id: 5 },
+  { character_id: 1, gift_id: 6 },
+  { character_id: 1, gift_id: 7 },
+  { character_id: 1, gift_id: 8 },
+  { character_id: 2, gift_id: 9 },
+  { character_id: 2, gift_id: 10 },
+  { character_id: 3, gift_id: 11 },
+  { character_id: 3, gift_id: 12 },
+  { character_id: 3, gift_id: 13 },
+  { character_id: 3, gift_id: 14 },
+  { character_id: 3, gift_id: 15 },
+  { character_id: 3, gift_id: 16 },
+  { character_id: 4, gift_id: 1 },
+  { character_id: 4, gift_id: 17 },
+  { character_id: 4, gift_id: 18 },
+  { character_id: 4, gift_id: 19 },
+  { character_id: 4, gift_id: 20 },
+  { character_id: 4, gift_id: 21 },
+  { character_id: 4, gift_id: 22 },
+  { character_id: 4, gift_id: 23 },
+  { character_id: 4, gift_id: 24 },
+  { character_id: 5, gift_id: 25 },
+  { character_id: 5, gift_id: 26 },
+  { character_id: 5, gift_id: 27 },
+  { character_id: 5, gift_id: 28 },
+  { character_id: 6, gift_id: 29 },
+  { character_id: 6, gift_id: 30 },
+  { character_id: 6, gift_id: 31 },
+  { character_id: 6, gift_id: 32 },
+  { character_id: 6, gift_id: 33 },
+  { character_id: 7, gift_id: 34 },
+  { character_id: 7, gift_id: 35 },
+  { character_id: 7, gift_id: 36 },
+  { character_id: 7, gift_id: 37 },
+  { character_id: 7, gift_id: 38 },
+  { character_id: 7, gift_id: 39 },
+  { character_id: 7, gift_id: 33 },
+  { character_id: 8, gift_id: 40 },
+  { character_id: 8, gift_id: 41 },
+  { character_id: 8, gift_id: 42 },
+  { character_id: 8, gift_id: 43 },
+  { character_id: 8, gift_id: 44 },
+  { character_id: 8, gift_id: 45 },
+  { character_id: 8, gift_id: 46 },
+  { character_id: 8, gift_id: 47 },
+  { character_id: 8, gift_id: 48 },
+  { character_id: 8, gift_id: 49 },
+  { character_id: 9, gift_id: 42 },
+  { character_id: 9, gift_id: 19 },
+  { character_id: 9, gift_id: 50 },
+  { character_id: 9, gift_id: 51 },
+  { character_id: 9, gift_id: 52 },
+  { character_id: 9, gift_id: 53 },
+  { character_id: 9, gift_id: 17 },
+  { character_id: 10, gift_id: 54 },
+  { character_id: 10, gift_id: 55 },
+  { character_id: 10, gift_id: 56 },
+  { character_id: 10, gift_id: 57 },
+  { character_id: 11, gift_id: 58 },
+  { character_id: 11, gift_id: 59 },
+  { character_id: 11, gift_id: 60 },
+  { character_id: 11, gift_id: 61 },
+  { character_id: 11, gift_id: 62 },
+  { character_id: 12, gift_id: 63 },
+  { character_id: 12, gift_id: 64 },
+  { character_id: 12, gift_id: 46 },
+  { character_id: 12, gift_id: 56 },
+  { character_id: 13, gift_id: 65 },
+  { character_id: 13, gift_id: 66 },
+  { character_id: 13, gift_id: 67 },
+  { character_id: 13, gift_id: 68 },
+  { character_id: 14, gift_id: 1 },
+  { character_id: 14, gift_id: 17 },
+  { character_id: 14, gift_id: 69 },
+  { character_id: 14, gift_id: 19 },
+  { character_id: 14, gift_id: 70 },
+  { character_id: 14, gift_id: 41 },
+  { character_id: 14, gift_id: 43 },
+  { character_id: 14, gift_id: 20 },
+  { character_id: 14, gift_id: 71 },
+  { character_id: 14, gift_id: 21 },
+  { character_id: 14, gift_id: 23 },
+  { character_id: 15, gift_id: 72 },
+  { character_id: 15, gift_id: 73 },
+  { character_id: 15, gift_id: 74 },
+  { character_id: 15, gift_id: 49 },
+  { character_id: 16, gift_id: 1 },
+  { character_id: 16, gift_id: 17 },
+  { character_id: 16, gift_id: 19 },
+  { character_id: 16, gift_id: 20 },
+  { character_id: 16, gift_id: 75 },
+  { character_id: 16, gift_id: 76 },
+  { character_id: 16, gift_id: 71 },
+  { character_id: 16, gift_id: 21 },
+  { character_id: 16, gift_id: 23 },
+  { character_id: 17, gift_id: 77 },
+  { character_id: 17, gift_id: 4 },
+  { character_id: 17, gift_id: 42 },
+  { character_id: 17, gift_id: 78 },
+  { character_id: 17, gift_id: 79 },
+  { character_id: 17, gift_id: 80 },
+  { character_id: 17, gift_id: 76 },
+  { character_id: 17, gift_id: 81 },
+  { character_id: 18, gift_id: 82 },
+  { character_id: 18, gift_id: 83 },
+  { character_id: 19, gift_id: 42 },
+  { character_id: 19, gift_id: 84 },
+  { character_id: 19, gift_id: 65 },
+  { character_id: 19, gift_id: 85 },
+  { character_id: 19, gift_id: 66 },
+  { character_id: 19, gift_id: 86 },
+  { character_id: 20, gift_id: 78 },
+  { character_id: 20, gift_id: 28 },
+  { character_id: 20, gift_id: 87 },
+  { character_id: 21, gift_id: 4 },
+  { character_id: 21, gift_id: 88 },
+  { character_id: 21, gift_id: 42 },
+  { character_id: 21, gift_id: 89 },
+  { character_id: 21, gift_id: 90 },
+  { character_id: 21, gift_id: 45 },
+  { character_id: 21, gift_id: 91 },
+  { character_id: 21, gift_id: 38 },
+  { character_id: 21, gift_id: 19 },
+  { character_id: 22, gift_id: 70 },
+  { character_id: 22, gift_id: 92 },
+  { character_id: 23, gift_id: 42 },
+  { character_id: 23, gift_id: 43 },
+  { character_id: 23, gift_id: 5 },
+  { character_id: 23, gift_id: 7 },
+  { character_id: 23, gift_id: 62 },
+  { character_id: 23, gift_id: 93 },
+  { character_id: 23, gift_id: 94 },
+  { character_id: 23, gift_id: 95 },
+  { character_id: 24, gift_id: 13 },
+  { character_id: 24, gift_id: 96 },
+  { character_id: 24, gift_id: 97 },
+  { character_id: 24, gift_id: 98 },
+  { character_id: 25, gift_id: 99 },
+  { character_id: 25, gift_id: 100 },
+  { character_id: 25, gift_id: 69 },
+  { character_id: 25, gift_id: 67 },
+  { character_id: 25, gift_id: 40 },
+  { character_id: 26, gift_id: 101 },
+  { character_id: 26, gift_id: 57 },
+  { character_id: 26, gift_id: 25 },
+  { character_id: 26, gift_id: 102 },
+  { character_id: 26, gift_id: 103 },
+  { character_id: 27, gift_id: 42 },
+  { character_id: 27, gift_id: 104 },
+  { character_id: 27, gift_id: 28 },
+  { character_id: 27, gift_id: 105 },
+  { character_id: 28, gift_id: 64 },
+  { character_id: 28, gift_id: 57 },
+  { character_id: 28, gift_id: 100 },
+  { character_id: 28, gift_id: 106 },
+  { character_id: 28, gift_id: 107 },
+  { character_id: 28, gift_id: 108 },
+  { character_id: 28, gift_id: 109 },
+  { character_id: 29, gift_id: 110 },
+  { character_id: 29, gift_id: 111 },
+  { character_id: 30, gift_id: 34 },
+  { character_id: 30, gift_id: 112 },
+  { character_id: 30, gift_id: 113 },
+  { character_id: 30, gift_id: 114 },
+  { character_id: 31, gift_id: 115 },
+  { character_id: 31, gift_id: 116 },
+  { character_id: 31, gift_id: 117 },
+  { character_id: 31, gift_id: 118 },
+  { character_id: 32, gift_id: 119 },
+  { character_id: 32, gift_id: 120 },
+  { character_id: 32, gift_id: 121 },
+  { character_id: 32, gift_id: 28 },
+  { character_id: 32, gift_id: 122 },
+  { character_id: 33, gift_id: 42 },
+  { character_id: 33, gift_id: 44 },
+  { character_id: 33, gift_id: 46 },
+  { character_id: 33, gift_id: 123 },
+  { character_id: 33, gift_id: 106 },
+  { character_id: 33, gift_id: 124 },
+  { character_id: 33, gift_id: 7 },
+  { character_id: 33, gift_id: 125 },
+  { character_id: 33, gift_id: 126 },
+  { character_id: 33, gift_id: 127 },
+  { character_id: 34, gift_id: 128 },
+  { character_id: 34, gift_id: 129 },
+  { character_id: 34, gift_id: 130 },
+  { character_id: 34, gift_id: 131 },
+  { character_id: 34, gift_id: 132 }
+]
+
+character_gifts.each do |gift|
+    CharacterGift.find_or_create_by(gift)
+end
+
 
 
 
