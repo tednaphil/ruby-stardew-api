@@ -50,8 +50,15 @@
 URL: `https://`
 | Method | Endpoint | Request Body | Sample Response |
 --- | --- | --- | ---
-<!-- `GET` | `/teas` | n/a | `[{id: 2, name: "Assam Tea", slug: "assam", style: "black",...}, ...]`
-`GET` | `/teas/:id` | n/a | `{id: 2, name: "Assam Tea", slug: "assam", style: "black",...}`
-`GET` | `/user_favs/:user_id` | n/a | `[{id: 1, user_id: 1, tea_id: 2}, ...]`
+`GET` | `/characters` | n/a | `[{id: 1, name: "Abigail", birthday: "Fall 13",...}, ...]`
+`GET` | `/characters/:id` | n/a | `{id: 4, name: "Emily", birthday: "Spring 27", hobbies: [
+{id: 10, slug: "sewing", name: "sewing", ...},
+...],
+fav_gifts: [
+{id: 17, slug: "tom-kha-soup", name: "Tom Kha Soup", ...},
+...]
+}`
+<!-- 
 `POST` | `/user_favs/` | `{fav: {user_id: 1, tea_id: 5}}` | `{id: 2, user_id: 1, tea_id: 5}`
+`PATCH` | `/user_favs/` | `{fav: {user_id: 1, tea_id: 5}}` | `{id: 2, user_id: 1, tea_id: 5}`
 `DELETE` | `/user_favs/:fav_id` | n/a | n/a -->
