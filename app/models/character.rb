@@ -15,4 +15,14 @@ class Character < ApplicationRecord
     def gift_names
         Gift.joins(:character_gifts).where(character_gifts: { character_id: self.id }).pluck(:name)
     end
+
+    def details
+        {
+            id: self.id,
+            name: self.name,
+            birthday: self.birthday,
+            hobbies: self.hobby_names,
+            favGifts: self.gift_names
+        }
+    end
 end

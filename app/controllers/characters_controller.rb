@@ -3,13 +3,15 @@ class CharactersController < ApplicationController
   character = Character.find(params[:id])
   # require "debug"; binding.break
 
-    render json: {
-      id: character.id,
-      name: character.name,
-      birthday: character.birthday,
-      hobbies: character.hobby_names,
-      favGifts: character.gift_names,
-    }
+    # render json: {
+    #   id: character.id,
+    #   name: character.name,
+    #   birthday: character.birthday,
+    #   hobbies: character.hobby_names,
+    #   favGifts: character.gift_names,
+    # }
+
+    render json: character.details
   end
 
   def index
