@@ -1,0 +1,2 @@
+class CharacterGiftsController < ApplicationController
+end
