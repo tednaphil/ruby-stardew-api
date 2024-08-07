@@ -8,6 +8,20 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
+UserFriend.destroy_all
+CharacterGift.destroy_all
+CharacterHobby.destroy_all
+Gift.destroy_all
+Hobby.destroy_all
+Character.destroy_all
+
+ActiveRecord::Base.connection.reset_pk_sequence!('user_friends')
+ActiveRecord::Base.connection.reset_pk_sequence!('character_gifts')
+ActiveRecord::Base.connection.reset_pk_sequence!('character_hobbies')
+ActiveRecord::Base.connection.reset_pk_sequence!('gifts')
+ActiveRecord::Base.connection.reset_pk_sequence!('hobbies')
+ActiveRecord::Base.connection.reset_pk_sequence!('characters')
+
 characters = [
   { name: 'Abigail', birthday: 'Fall 13' },
   { name: 'Alex', birthday: 'Summer 13' },
@@ -46,7 +60,7 @@ characters = [
 ]
 
 characters.each do |character|
-    Character.find_or_create_by(character)
+    Character.find_or_create_by!(character)
 end
 
 hobbies = [
@@ -109,7 +123,7 @@ hobbies = [
 ]
 
 hobbies.each do |hobby|
-    Hobby.find_or_create_by(hobby)
+    Hobby.find_or_create_by!(hobby)
 end
 
 gifts = [
@@ -342,8 +356,12 @@ gifts = [
 ]
 
 gifts.each do |gift|
-    Gift.find_or_create_by(gift)
+    Gift.find_or_create_by!(gift)
 end
+
+#chain .create!()
+
+# require "debug"; binding.break
 
 character_hobbies = [
   { character_id: 1, hobby_id: 1 },  # Abigail - Playing flute
@@ -451,7 +469,7 @@ character_hobbies = [
 ]
 
 character_hobbies.each do |hobby|
-    CharacterHobby.find_or_create_by(hobby)
+    CharacterHobby.find_or_create_by!(hobby)
 end
 
 character_gifts = [
@@ -650,7 +668,7 @@ character_gifts = [
 ]
 
 character_gifts.each do |gift|
-    CharacterGift.find_or_create_by(gift)
+    CharacterGift.find_or_create_by!(gift)
 end
 
 
