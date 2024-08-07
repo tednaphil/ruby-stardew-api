@@ -17,8 +17,12 @@ class Character < ApplicationRecord
         @char_gifts = Character.find(char_id).character_gifts
         @char_gifts.map{ |g| Gift.find([g.id]) }.flatten
     end
-
+    
     def self.data(char_id)
         Character.find(char_id)
+    end
+
+    def lala
+        Gift.joins(:character_gifts).where(character_gifts: { character_id: self.id }).pluck(:name)
     end
 end
