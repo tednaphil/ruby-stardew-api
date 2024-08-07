@@ -8,21 +8,11 @@ class Character < ApplicationRecord
     has_many :character_hobbies
     has_many :hobbies, through: :character_hobbies
 
-    def self.hobby_names(char_id)
-        @char_hobbies = Character.find(char_id).character_hobbies
-        @char_hobbies.map{ |h| Hobby.find([h.id]) }.flatten
+    def hobby_names
+        Hobby.joins(:character_hobbies).where(character_hobbies: { character_id: self.id }).pluck(:name)
     end
 
-    def self.fav_gift_names(char_id)
-        @char_gifts = Character.find(char_id).character_gifts
-        @char_gifts.map{ |g| Gift.find([g.id]) }.flatten
-    end
-    
-    def self.data(char_id)
-        Character.find(char_id)
-    end
-
-    def lala
+    def gift_names
         Gift.joins(:character_gifts).where(character_gifts: { character_id: self.id }).pluck(:name)
     end
 end
