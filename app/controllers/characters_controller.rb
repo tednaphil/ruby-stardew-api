@@ -3,24 +3,19 @@ class CharactersController < ApplicationController
   character = Character.find(params[:id])
   # require "debug"; binding.break
 
-    # render json: {
-    #   id: character.id,
-    #   name: character.name,
-    #   birthday: character.birthday,
-    #   hobbies: character.hobby_names,
-    #   favGifts: character.gift_names,
-    # }
-
     render json: character.details
   end
 
   def index
-    # @characters = Character.all
-    # @characters.each do |character|
-    #   render only id, name, avatar, and birthday
-    #   render array of strings instead of objects for character gifts and hobbies
+    # characters = Character.all
+
+    # characters = Character.all.each do |character|
+    #   return character.details      
     # end
-    render json: Character.all
+
+    characters = Character.all.map{ |c| c.details }
+
+    render json: characters
   end
 
 end
