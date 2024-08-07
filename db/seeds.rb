@@ -11,19 +11,16 @@
 UserFriend.destroy_all
 CharacterGift.destroy_all
 CharacterHobby.destroy_all
-Character.destroy_all
 Gift.destroy_all
 Hobby.destroy_all
-#rest of tables
-#order of deletion matters in relational databases
+Character.destroy_all
 
 ActiveRecord::Base.connection.reset_pk_sequence!('user_friends')
 ActiveRecord::Base.connection.reset_pk_sequence!('character_gifts')
 ActiveRecord::Base.connection.reset_pk_sequence!('character_hobbies')
-ActiveRecord::Base.connection.reset_pk_sequence!('characters')
 ActiveRecord::Base.connection.reset_pk_sequence!('gifts')
 ActiveRecord::Base.connection.reset_pk_sequence!('hobbies')
-#must resect pks for each table
+ActiveRecord::Base.connection.reset_pk_sequence!('characters')
 
 characters = [
   { name: 'Abigail', birthday: 'Fall 13' },
@@ -362,9 +359,8 @@ gifts.each do |gift|
     Gift.find_or_create_by!(gift)
 end
 
-#chain.create!()
+#chain .create!()
 
-#place pry here
 # require "debug"; binding.break
 
 character_hobbies = [
