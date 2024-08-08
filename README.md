@@ -50,15 +50,10 @@
 URL: `https://`
 | Method | Endpoint | Request Body | Sample Response |
 --- | --- | --- | ---
-`GET` | `/characters` | n/a | `[{id: 1, name: "Abigail", birthday: "Fall 13",...}, ...]`
-`GET` | `/characters/:id` | n/a | `{id: 4, name: "Emily", birthday: "Spring 27", hobbies: [
-{id: 10, slug: "sewing", name: "sewing", ...},
-...],
-fav_gifts: [
-{id: 17, slug: "tom-kha-soup", name: "Tom Kha Soup", ...},
-...]
-}`
-<!-- 
-`POST` | `/user_favs/` | `{fav: {user_id: 1, tea_id: 5}}` | `{id: 2, user_id: 1, tea_id: 5}`
-`PATCH` | `/user_favs/` | `{fav: {user_id: 1, tea_id: 5}}` | `{id: 2, user_id: 1, tea_id: 5}`
-`DELETE` | `/user_favs/:fav_id` | n/a | n/a -->
+`GET` | `/characters` | n/a | `[{id: 1, name: "Abigail", hobbies: ["playing flute", "mining", "playing video games"], favGifts:  ["Chocolate Cake", ...]}, ...]`
+`GET` | `/characters/:id` | n/a | `{id: 1, name: "Abigail", hobbies: ["playing flute", "mining", "playing video games"], favGifts: ["Chocolate Cake", ...]}`
+<!--
+`PUT` | `'/api/v1/characters/:id'` | `{hobby: "shopping", avatar: "newURL"}` | `{id: "1", name: "Abigail", hobbies: ["playing flute", "mining", "playing video games, shopping"], avatar: "newURL"}`
+`POST` | `'/api/v1/characters'` | `{name: "Ellis", hobbies: ["hobby1", "hobby2"], avatar: "URL"}` | `{id: "2", name: "Ellis", hobbies: ["hobby1", "hobby2"], avatar: "URL"}`
+`DELETE` | `'/api/v1/characters/:id'` | n/a | n/a
+-->
