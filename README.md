@@ -17,7 +17,7 @@
 |Repo|Deployment|Description|
 |:--:|:--:|:--:|
 |[FE Repo]()|[App]()| Description|
-|[BE Repo](https://github.com/tednaphil/ruby-stardew-api)📍 | [Stardew API]()| Description|
+|[BE Repo](https://github.com/tednaphil/ruby-stardew-api)📍 | [Stardew API](https://ruby-stardew-api.onrender.com)| NPC character data|
 |
 
 ## Local Setup Instructions:
@@ -47,7 +47,7 @@
 
 
 ## Endpoints
-URL: `https://`
+URL: `https://ruby-stardew-api.onrender.com`
 | Method | Endpoint | Request Body | Sample Response |
 --- | --- | --- | ---
 `GET` | `/characters` | n/a | `[{id: 1, name: "Abigail", hobbies: ["playing flute", "mining", "playing video games"], favGifts:  ["Chocolate Cake", ...]}, ...]`
