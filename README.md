@@ -1,24 +1,13 @@
-<!-- <div align="center">
-  <img src="" alt="" height="200px">
-</div> -->
-
-<!-- <div>
-  <img src="" alt="" height="200px">
-</div> -->
-
-# <p align="center">Title</p>
-
-<!-- ## Summary: -->
-<p align="center">Abstract</p>
+# ruby-stardew-api <img style="width: 40px" src="https://cdn2.steamgriddb.com/icon/2119b8d43eafcf353e07d7cb5554170b/32/256x256.png"/>
 
 ### Background
+This API only app was built to replace and enhance the [original Express Stardew API backend](https://github.com/tednaphil/stardew-api) with new endpoints for potential future features.
 
 ### Project Links
 |Repo|Deployment|Description|
 |:--:|:--:|:--:|
-|[FE Repo]()|[App]()| Description|
+|[FE Repo](https://github.com/tednaphil/stardew-friends)|[Stardew Friends](stardew-friends.vercel.app/)| Track friendships with your favorite Stardew Valley NPCs|
 |[BE Repo](https://github.com/tednaphil/ruby-stardew-api)📍 | [Stardew API](https://ruby-stardew-api.onrender.com)| NPC character data|
-|
 
 ## Local Setup Instructions:
 - Run the following on the command line to clone the repo and navigate into the project directory
@@ -57,3 +46,6 @@ URL: `https://ruby-stardew-api.onrender.com`
 `POST` | `'/api/v1/characters'` | `{name: "Ellis", hobbies: ["hobby1", "hobby2"], avatar: "URL"}` | `{id: "2", name: "Ellis", hobbies: ["hobby1", "hobby2"], avatar: "URL"}`
 `DELETE` | `'/api/v1/characters/:id'` | n/a | n/a
 -->
+
+## What's Next
+- GET, PUT, POST, and DELETE endpoints for `user_friends`
