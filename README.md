@@ -6,7 +6,7 @@ This API only app was built to replace and enhance the [original Express Stardew
 ### Project Links
 |Repo|Deployment|Description|
 |:--:|:--:|:--:|
-|[FE Repo](https://github.com/tednaphil/stardew-friends)|[Stardew Friends](stardew-friends.vercel.app/)| Track friendships with your favorite Stardew Valley NPCs|
+|[FE Repo](https://github.com/tednaphil/stardew-friends)|[Stardew Friends](https://stardew-friends.vercel.app/)| Track friendships with your favorite Stardew Valley NPCs|
 |[BE Repo](https://github.com/tednaphil/ruby-stardew-api)📍 | [Stardew API](https://ruby-stardew-api.onrender.com)| NPC character data|
 
 ## Local Setup Instructions:
